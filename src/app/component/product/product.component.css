@@ -1,0 +1,27 @@
+.port-icon{
+  padding-top: 2rem;
+  text-align: right;
+  padding-right: 0px;
+}
+.p_serv::after{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4%;
+  height: 5px;
+  background-color: #64b496;
+  margin-bottom: 1rem;
+}
+.port_img{
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.port_img img{
+  transition: all 0.7s;
+}
+.card:hover .port_img img{
+  transform: scale(1.3);
+}

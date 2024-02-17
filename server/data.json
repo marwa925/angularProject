@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "oppo",
+      "price": 30000,
+      "quantity": 2,
+      "id": "1"
+    },
+    {
+      "name": "sumsung",
+      "price": 1000000,
+      "quantity": 4,
+      "id": "2"
+    },
+    {
+      "name": "IPhone ",
+      "price": 600000,
+      "quantity": 1,
+      "id": "3"
+    },
+    {
+      "name": "nokia",
+      "price": 200000,
+      "quantity": 3,
+      "id": "b35c"
+    },
+    {
+      "id": "d04d",
+      "name": "sumsung",
+      "price": 60000,
+      "quantity": 2
+    },
+    {
+      "id": "731f",
+      "name": "Lenovo",
+      "price": 3000,
+      "quantity": 7
+    }
+  ]
+}

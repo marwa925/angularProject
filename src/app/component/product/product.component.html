@@ -1,0 +1,22 @@
+<section class="portofilo container  my-5" id="portfolo">
+  <h2 class="fs-1 fw-bold text-center">Product</h2>
+  <p class="text-secondary position-relative p_serv text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+  <div class="row my-5">
+      <div class="col-lg-4 " *ngFor="let product of products">
+          <div class="card shadow my-2 p-4" >
+              <p class="text-success fs-5"><span class="fw-bold text-dark ">ID:</span> {{product?.id}}</p>
+              <p class="text-success fs-5"><span class="fw-bold text-dark">Name:</span> {{product?.name}}</p>
+              <p class="text-success fs-5"><span class="fw-bold text-dark">Price:</span> {{product?.price}}</p>
+              <p class="text-success fs-5"><span class="fw-bold text-dark">Quantity:</span> {{product?.quantity}}</p>
+              <p class="text-info "><a [routerLink]="['/products',product.id]"> Show Details...</a></p>
+              <div class="d-flex justify-content-evenly">
+                <!-- <button class="btn btn-success" [routerLink]="['/products',product.id,false]">Add ➕</button> -->
+                <button class="btn btn-danger" (click)="deletHandlar(product.id)">Delete🧺</button>
+                <button class="btn btn-warning" [routerLink]="['/products',product.id,true]">Edit 📝</button>
+
+              </div>
+            </div>
+      </div>
+
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<div class="p-3 w-50 m-auto shadow my-5">
+  <h2 class="text-center" *ngIf="productEdit">Edit Product</h2>
+  <h2 class="text-center" *ngIf="!productEdit">Add Product</h2>
+  <form [formGroup]="productForm" (submit)="formOperation($event)">
+
+    <div class="my-2 ">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" formControlName="name"  name="name"  class="form-control" id="name">
+      <ng-container *ngIf="getName.touched">
+        <div
+          *ngIf="getName.hasError('required')"
+          id="nameHelp"
+          class="form-text text-danger"
+        >
+          Name is Required
+        </div>
+        <div
+          *ngIf="getName.hasError('minlength')"
+          id="emailHelp"
+          class="form-text text-danger"
+        >
+          Name lenght must be greater than 3
+        </div>
+      </ng-container>
+    </div>
+    <div class="my-2 ">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" formControlName="price" name="price"   class="form-control" id="price">
+      <ng-container *ngIf="getPrice.touched">
+        <div
+          *ngIf="getPrice.hasError('required')"
+          id="emailHelp"
+          class="form-text text-danger"
+        >
+          Price is Required
+        </div>
+      </ng-container>
+    </div>
+    <div class="my-2 ">
+      <label class="form-label" for="quntity">Quantity</label>
+      <input type="number" formControlName="quantity"   class="form-control" id="quntity">
+      <ng-container *ngIf="getQuantity.touched">
+        <div
+          *ngIf="getQuantity.hasError('required')"
+          id="emailHelp"
+          class="form-text text-danger"
+        >
+          Quantity is Required
+        </div>
+      </ng-container>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+      {{ productId == 0 ? "Add Product" : "Edit Product" }}
+    </button>
+  </form>
+</div>
